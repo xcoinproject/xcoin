@@ -506,8 +506,8 @@ std::string HelpMessage(HelpMessageMode mode)
 
 std::string LicenseInfo()
 {
-    const std::string URL_SOURCE_CODE = "<https://github.com/xcoin/xcoin>";
-    const std::string URL_WEBSITE = "<https://xcoin.org>";
+    const std::string URL_SOURCE_CODE = "<https://github.com/xcoinproject/xcoin>";
+    const std::string URL_WEBSITE = "<https://xcoinproject.com>";
 
     return CopyrightHolders(strprintf(_("Copyright (C) %i-%i"), 2017, COPYRIGHT_YEAR) + " ") + "\n" +
            "\n" +
