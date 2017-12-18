@@ -1,7 +1,7 @@
 xCoin
 ============
 
-https://xcoin.org
+https://xcoinproject.com
 
 What is xCoin?
 ---------------------
