@@ -49,7 +49,7 @@ static const int MAX_URI_LENGTH = 255;
 #define SPINNER_FRAMES 36
 
 #define QAPP_ORG_NAME "xcoin"
-#define QAPP_ORG_DOMAIN "xcoin.org"
+#define QAPP_ORG_DOMAIN "xcoinproject.com"
 #define QAPP_APP_NAME_DEFAULT "xcoin-Qt"
 #define QAPP_APP_NAME_TESTNET "xcoin-Qt-testnet"
 
