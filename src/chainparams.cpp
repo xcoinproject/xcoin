@@ -157,6 +157,13 @@ public:
         chainTxData = ChainTxData{
         };
     }
+    
+    void UpdateDifficultyAdjustmentParameters(int64_t nPowTargetSpacing, int64_t nPowTargetTimespan)
+    {
+        consensus.nPowTargetSpacing = nPowTargetSpacing;
+        consensus.nPowTargetTimespan = nPowTargetTimespan;
+    }    
+    
 };
 static CMainParams mainParams;
 
@@ -378,4 +385,16 @@ void MineGenesisBlock(CBlock &genesis)
   }
   
   printf("%s\n",genesis.ToString().c_str());	
+}
+
+
+void SetDifficultyAdjustmentParams(int nHeight)
+{
+    std::cout << "chainActive height is: " << nHeight << std::endl;
+    if (nHeight >= 40000) {
+        int64_t modifiedPowTargetTimespan = 52.5 * 60; // 52.5 minutes (10 blocks)
+        int64_t modifiedPowTargetSpacing = 5.25 * 60;   // 5.25 minutes
+
+        mainParams.UpdateDifficultyAdjustmentParameters(modifiedPowTargetSpacing, modifiedPowTargetTimespan);
+    }
 }

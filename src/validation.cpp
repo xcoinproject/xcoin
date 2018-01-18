@@ -3009,6 +3009,8 @@ bool ContextualCheckBlock(const CBlock& block, CValidationState& state, const Co
 {
     const int nHeight = pindexPrev == NULL ? 0 : pindexPrev->nHeight + 1;
 
+    if(nHeight == 40000) return true; //Don't check difficulty of block 40000, difficult fork at this block.
+
     // Start enforcing BIP113 (Median Time Past) using versionbits logic.
     int nLockTimeFlags = 0;
     if (VersionBitsState(pindexPrev, consensusParams, Consensus::DEPLOYMENT_CSV, versionbitscache) == THRESHOLD_ACTIVE) {
